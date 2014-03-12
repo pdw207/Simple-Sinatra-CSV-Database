@@ -1,0 +1,23 @@
+body {
+    /* Use a "Matrix"-style color scheme. */
+
+    font-size: 1.5em;
+    margin: 0 auto;
+    width: 500px;
+}
+
+ul {
+    /* Wrap the list in a green box. */
+    width: 300px;
+
+}
+
+td{
+    /* Add a bit more spacing between list items. */
+    text-align: center;
+
+}
+
+table{
+    border-spacing: 50px 0;
+}

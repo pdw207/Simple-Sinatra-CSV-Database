@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Wizard Database</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+      <h1>Wizard Resource List</h1>
+
+<table>
+  <tbody>
+
+  <form action="/articles" method="post">
+    <tr>
+      <td><label for="name">Article Title:</label></td>
+      <td><input type="text" id="name" name="name" /></td>
+    </tr>
+    <tr>
+      <td><label for="url">Article URL:</label></td>
+      <td><input type="text" id="url" name="url" /></td>
+    </tr>
+    <tr>
+      <td><label for="description">Article Description:</label></td>
+      <td><input type="text" id="description" name="description" /></td>
+    </tr>
+    <tr>
+      <td><input type="submit" /></td>
+    </tr>
+    </tbody>
+</table>
+</form>
+<br>
+<table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <% @wizards.each do |wizard| %>
+        <tr>
+          <td><a href="<%=wizard.url%>"  target="_blank"><%= wizard.title %></td>
+          <td><%= wizard.description%></a></td>
+        </tr>
+      <% end %>
+    </table>
+
+
+
+
+  </body>
+
+</html>
